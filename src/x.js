@@ -1,3 +1,3 @@
-import css from './x.css'
-console.log(css);
-export default "hello world"
+import "./x.css";
+import "./y.css";
+export default "hello world";
