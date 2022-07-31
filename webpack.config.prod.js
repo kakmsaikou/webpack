@@ -8,12 +8,13 @@ module.exports = {
         ...base.plugins,
         new MiniCssExtractPlugin({
            filename: '[name].[contenthash].css',
-            chunkFilename: '[id].css',
+            chunkFilename: '[id].[contenthash].css',
             ignoreOrder: false,
         }),
     ],
     module: {
         rules: [
+            ...base.module.rules,
             {
                 test: /\.css$/i,
                 use: [
